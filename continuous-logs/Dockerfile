@@ -1,5 +1,5 @@
 FROM golang:latest
-WORKDIR /go/src/continuous-log
+WORKDIR /go/src/continuous-logs
 COPY . .
 
 RUN go install -v ./...
@@ -12,5 +12,5 @@ RUN apt-get update \
         netcat \
     && rm -rf /var/lib/apt/lists/*
 
-CMD ["continuous-log"]
+CMD ["continuous-logs"]
 
